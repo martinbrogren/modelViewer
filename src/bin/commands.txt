@@ -1,6 +1,6 @@
 
 jar cf appartment.jar *.class ./data
 
-java -Djava.library.th=./l32 -cp .:./l32/j3dutils.jar:./l32/j3dcore.jar:./l32/vecmath.jar:j3d-contrib-utils.jar:appartment.jar appartmentWithColladaApplet
+java -Djava.library.path=./l32 -cp .:./l32/j3dutils.jar:./l32/j3dcore.jar:./l32/vecmath.jar:j3d-contrib-utils.jar:appartment.jar appartmentWithColladaApplet
 
 jarsigner appartment.jar mykey
