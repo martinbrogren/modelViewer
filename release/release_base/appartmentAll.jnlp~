@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<jnlp spec="1.0+" codebase="http://192.168.1.66/~Martin/appartment_20131130/" href="appartmentAll.jnlp">
+	<information>
+		<title>Jnlp Testing</title>
+		<vendor>YONG MOOK KIM</vendor>
+		<homepage href="http://192.168.1.66/~Martin/appartment_20131130/" />
+		<description>Testing Testing</description>
+	</information>
+	<security>
+		<all-permissions/>
+	</security>
+	<resources>
+		<j2se version="1.6+" />
+		<jar href="appartment.jar" />
+		<jar href="./l64/j3dutils.jar" />
+		<jar href="./l64/j3dcore.jar" />
+		<jar href="./l64/vecmath.jar" />
+		<jar href="j3d-contrib-utils.jar" />
+		<jar href="./l32/j3dutils.jar" />
+		<jar href="./l32/j3dcore.jar" />
+		<jar href="./l32/vecmath.jar" />
+		<jar href="./w32/j3dutils.jar" />
+		<jar href="./w32/j3dcore.jar" />
+		<jar href="./w32/vecmath.jar" />
+		<jar href="./w64/j3dutils.jar" />
+		<jar href="./w64/j3dcore.jar" />
+		<jar href="./w64/vecmath.jar" />
+		<nativelib href="./l64/nativelibu64.jar" />
+		<nativelib href="./l32/nativelibU32.jar" />
+		<nativelib href="./w32/nativelibW32.jar" />
+		<nativelib href="./w64/nativelibW64.jar" />
+	</resources>
+	<application-desc main-class="appartmentWithColladaApplet" />
+</jnlp>
