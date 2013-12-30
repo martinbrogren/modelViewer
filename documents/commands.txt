@@ -1,0 +1,18 @@
+c++filt missingfunction (or something else)
+ldd program
+gitk --all
+ccmake ./
+ldconfig Sökväg
+
+
+sudo mount -t vboxsf virtualboxShared /home/martin/sharedVB
+
+sudo mount -t vboxsf Google_Drive /home/martin/gdrive
+
+#To be able to access old commands in the ubuntu terminal with up arrow using historical commands matching what you have started writing (python and matlab style), do the following:
+-Create a file .inputrc in your home folder if it doesn't already exists.
+-Add the following lines
+"\e[B": history-search-forward
+"\e[A": history-search-backward
+-Restart terminal
+#See http://stackoverflow.com/questions/1030182/how-do-i-change-bash-history-completion-to-complete-whats-already-on-the-line
