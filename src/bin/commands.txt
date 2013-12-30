@@ -1,1 +1,5 @@
 java -cp .:./l32/j3dutils.jar:./l32/j3dcore.jar:./l32/vecmath.jar:j3d-contrib-utils.jar:appartment.jar appartmentWithColladaApplet
+
+jar cf appartment.jar *.class ./data
+
+jarsigner appartment.jar mykey

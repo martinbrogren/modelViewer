@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?> 
-<jnlp spec="1.0+" codebase="http://192.168.1.66/~Martin/appartment_release_20131230/" href="appartmentOSapplet.jnlp">
+<jnlp spec="1.0+" codebase="http://2.248.188.168/~Martin/appartment_release_20131230/" href="appartmentOSapplet.jnlp">
 	<information>
 		<title>Appartment viewer</title>
 		<vendor>Martin Brogren</vendor>
-		<homepage href="http://192.168.1.66/~Martin/appartment_release_20131230/" />
+		<homepage href="http://2.248.188.168/~Martin/appartment_release_20131230/" />
 		<description>Appartment viewer</description>
 	</information>
 	<security>
