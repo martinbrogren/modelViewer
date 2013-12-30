@@ -1,0 +1,1 @@
+javac -cp j3dutils.jar:j3dcore.jar:vecmath-1.5.2.jar:j3d-contrib-utils.jar appartmentWithColladaApplet.java DAELoader.java plane.java view.java XMLFilePlaneReader.java XMLFileViewsReader.java -d ./bin

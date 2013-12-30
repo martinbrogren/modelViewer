@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<views>
+   <view>
+      <coord_x>-105.3193</coord_x>
+      <coord_y>-159.3702</coord_y>
+      <coord_z>150</coord_z>
+      <az>-0.53293</az>
+      <elev>0</elev>
+      <roll>0</roll>
+      <fov_hz>60</fov_hz>
+      <fov_vert>60</fov_vert>
+      <image>vrum_mot_balkong.JPG</image>
+   </view>
+   <view>
+      <coord_x>127.3239</coord_x>
+      <coord_y>34.4991</coord_y>
+      <coord_z>150</coord_z>
+      <az>-2.235</az>
+      <elev>0</elev>
+      <roll>0</roll>
+      <fov_hz>60</fov_hz>
+      <fov_vert>60</fov_vert>
+      <image>vrum_mot_fonster.JPG</image>
+   </view>
+   <view>
+      <coord_x>-103.1652</coord_x>
+      <coord_y>-264.9213</coord_y>
+      <coord_z>150</coord_z>
+      <az>0.54045</az>
+      <elev>0</elev>
+      <roll>0</roll>
+      <fov_hz>60</fov_hz>
+      <fov_vert>60</fov_vert>
+      <image>vrum_mot_valv.JPG</image>
+   </view>
+   <view>
+      <coord_x>26.0811</coord_x>
+      <coord_y>-32.2781</coord_y>
+      <coord_z>150</coord_z>
+      <az>-1.5483</az>
+      <elev>0</elev>
+      <roll>0</roll>
+      <fov_hz>60</fov_hz>
+      <fov_vert>60</fov_vert>
+      <image>vrum_mot_yttervagg.JPG</image>
+   </view>
+</views>
