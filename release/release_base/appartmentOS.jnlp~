@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<jnlp spec="1.0+" codebase="http://192.168.1.66/~Martin/appartment_20131229/" href="appartmentOS.jnlp">
+	<information>
+		<title>Appartment viewer</title>
+		<vendor>Martin Brogren</vendor>
+		<homepage href="http://192.168.1.66/~Martin/appartment_20131229/" />
+		<description>Appartment viewer</description>
+	</information>
+	<security>
+		<all-permissions/>
+	</security>
+	
+	<resources>
+		<j2se version="1.6+" />
+		<jar href="appartment.jar" />
+		<jar href="j3d-contrib-utils.jar" />
+	</resources>
+
+	<resources os="Mac">
+		<j2se version="1.6+" />
+		<jar href="./macosx/j3dutils.jar" />
+		<jar href="./macosx/j3dcore.jar" />
+		<jar href="./macosx/vecmath.jar" />
+	</resources>
+
+	<resources os="Linux" arch="x86 i386 i686">
+		<j2se version="1.6+" />
+		<jar href="./l32/j3dutils.jar" />
+		<jar href="./l32/j3dcore.jar" />
+		<jar href="./l32/vecmath.jar" />
+		<nativelib href="./l32/nativelibU32.jar" />
+	</resources>
+
+	<resources os="Linux" arch="x86_64 ia64 amd64">
+		<j2se version="1.6+" />
+		<jar href="./l64/j3dutils.jar" />
+		<jar href="./l64/j3dcore.jar" />
+		<jar href="./l64/vecmath.jar" />
+		<nativelib href="./l64/nativelibu64.jar" />
+	</resources>
+
+	<resources os="Windows">
+		<j2se version="1.6+" />
+		<jar href="./w32/j3dutils.jar" />
+		<jar href="./w32/j3dcore.jar" />
+		<jar href="./w32/vecmath.jar" />
+		<jar href="./w64/j3dutils.jar" />
+		<jar href="./w64/j3dcore.jar" />
+		<jar href="./w64/vecmath.jar" />
+		<nativelib href="./w32/nativelibW32.jar" />
+		<nativelib href="./w64/nativelibW64.jar" />
+	</resources>
+	<application-desc main-class="appartmentWithColladaApplet" />
+</jnlp>
