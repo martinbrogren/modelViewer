@@ -1,0 +1,13 @@
+
+
+//Add file to local branch
+git add filename
+
+//Add local changes to local branch
+git commit -m 'message' -a
+
+//Push local branch changes to repository
+git push origin master
+
+//Pull repository changes to local branch
+git pull origin master
