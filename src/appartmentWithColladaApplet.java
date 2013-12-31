@@ -15,11 +15,11 @@ import javax.media.j3d.*;
 import javax.vecmath.*;
 
 import java.awt.event.*;
-import java.awt.image.BufferedImage;
+//import java.awt.image.BufferedImage;
 
 import java.awt.*;
 import java.io.FileNotFoundException;
-import java.io.InputStream;
+//import java.io.InputStream;
 
 import java.util.Enumeration;
 import java.util.Vector;
@@ -36,26 +36,13 @@ import org.jdesktop.j3d.utils.view.ViewUtils.Axis;
 
 import java.applet.Applet;
 
-import java.net.URISyntaxException;
+//import java.net.URISyntaxException;
 import java.net.URL;
-import java.net.URI;
+//import java.net.URI;
 
 import java.io.*;
 
 public class appartmentWithColladaApplet extends Applet implements ActionListener, MouseListener {
-
-//	static {	 
-//		try {	
-//			URL lib_url_l32 = getClass().getResource("/l32");
-//			System.out.println("lib url l32: " + lib_url_l32);
-//			
-//			NativeUtils.loadLibraryFromJar(lib_url_l32 + "/libj3dcore-ogl.so");	 
-//		} catch (IOException e) {	 
-//			e.printStackTrace(); // This is probably not the best way to handle exception :-)	 
-//		}	 
-//	}	
-
-	
 	
 	//Define colors
 	private Color3f black = new Color3f(0.0f, 0.0f, 0.0f);
@@ -127,62 +114,7 @@ public class appartmentWithColladaApplet extends Applet implements ActionListene
 	
 	public appartmentWithColladaApplet()
 	{		
-
-//		try {	
-////			String nativeLibPathL32 = NativeUtils.createTempLibraryFromJar("/l32/libj3dcore-ogl.so");
-////			nativeLibPathL32 = NativeUtils.createTempLibraryFromJar("/l32/libj3dcore-ogl-cg.so");
-//			
-//			String nativeLibPathL64 = NativeUtils.createTempLibraryFromJar("/l64/libj3dcore-ogl.so");
-////			
-//			String nativeLibPathW32 = NativeUtils.createTempLibraryFromJar("/w32/j3dcore-d3d.dll");
-//			nativeLibPathW32 = NativeUtils.createTempLibraryFromJar("/w32/j3dcore-ogl.dll");
-//			nativeLibPathW32 = NativeUtils.createTempLibraryFromJar("/w32/j3dcore-ogl-cg.dll");
-//			nativeLibPathW32 = NativeUtils.createTempLibraryFromJar("/w32/j3dcore-ogl-chk.dll");
-////			
-////			String nativeLibPathW64 = NativeUtils.createTempLibraryFromJar("/w64/j3dcore-ogl.dll");
-//			
-////			System.setProperty( "java.library.path", nativeLibPathL32 + File.pathSeparator + nativeLibPathL64 + File.pathSeparator + nativeLibPathW32 + File.pathSeparator + nativeLibPathW64);
-////			System.setProperty( "java.library.path", nativeLibPathL32 + File.pathSeparator + nativeLibPathW32);
-//			System.setProperty( "java.library.path", nativeLibPathL64 + File.pathSeparator + nativeLibPathW32);
-//		} catch (IOException e) {	
-//			e.printStackTrace(); // This is probably not the best way to handle exception :-)	 
-//		}
-//
-//		
-//		
-////		System.setProperty( "java.library.path", lib_url_l32.getPath() + File.pathSeparator + lib_url_l64.getPath() + File.pathSeparator + lib_url_w32.getPath() + File.pathSeparator + lib_url_w64.getPath() + File.pathSeparator + lib_url_mac.getPath());
-////		System.setProperty( "java.library.path", lib_url_l32 + File.pathSeparator + lib_url_l64 + File.pathSeparator + lib_url_w32 + File.pathSeparator + lib_url_w64 + File.pathSeparator + lib_url_mac);
-////		System.setProperty( "java.library.path", "jar:" + lib_url_l32 + "/nativelibU32.jar!/");
-////		System.setProperty( "java.library.path", "");
-//		
-//		
-//		java.lang.reflect.Field fieldSysPath;
-//		try {
-//			fieldSysPath = ClassLoader.class.getDeclaredField( "sys_paths" );
-//			fieldSysPath.setAccessible( true );
-//			try {
-//				fieldSysPath.set( null, null );
-//			} catch (IllegalArgumentException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			} catch (IllegalAccessException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//		} catch (SecurityException e1) {
-//			// TODO Auto-generated catch block
-//			e1.printStackTrace();
-//		} catch (NoSuchFieldException e1) {
-//			// TODO Auto-generated catch block
-//			e1.printStackTrace();
-//		}
-		
-		System.out.println("LD Library Path:" + System.getProperty("java.library.path"));
-		String workingDir = appartmentWithColladaApplet.class.getProtectionDomain().getCodeSource().getLocation().getFile();
-		System.out.println("Working directory: " + appartmentWithColladaApplet.class.getProtectionDomain().getCodeSource().getLocation().getFile());
-		
 		_dae_url = getClass().getResource(_colladaFile);
-		System.out.println("collada url: " + _dae_url);
 		
 		setLayout(new BorderLayout());
 
@@ -253,9 +185,7 @@ public class appartmentWithColladaApplet extends Applet implements ActionListene
 		System.out.println("Skapa olika mode för viewern. Lås frihetsgrader, ha bilderna i lista bredvid modellen, highlighta cameror när man kör mouseover på bilderna.");
 		System.out.println("Clean up applet version");
 		
-		System.out.println("HTML version hittar inte native libs i windows");
 		System.out.println("Mac funkar inte. Mouse behaviour is sealed");
-		System.out.println("Checka in på nytt repository");
 		System.out.println("Lägg in en mäklarsida som bakgrund på htlm versionen");
 		
 		System.out.println("FIX ME:");

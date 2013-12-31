@@ -11,3 +11,11 @@ git push origin master
 
 //Pull repository changes to local branch
 git pull origin master
+
+//Create a new repository
+-Create a new repository on github
+git init (in your local folder)
+git add filename
+git commit...
+git remote add origin "git https"
+Up and running...
