@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<appartment>
+	<plane id="1001">
+		<xdim>0.5</xdim>
+		<ydim>0.01</ydim>
+		<zdim>1.7</zdim>
+		<xtransform>0</xtransform>
+		<ytransform>-0.2</ytransform>
+		<ztransform>0</ztransform>
+	</plane>
+	<plane id="1002">
+		<xdim>0.5</xdim>
+		<ydim>0.2</ydim>
+		<zdim>0.01</zdim>
+		<xtransform>0</xtransform>
+		<ytransform>0</ytransform>
+		<ztransform>-0.7</ztransform>
+	</plane>
+	<plane id="1003">
+		<xdim>0.01</xdim>
+		<ydim>0.2</ydim>
+		<zdim>0.7</zdim>
+		<xtransform>-0.5</xtransform>
+		<ytransform>0</ytransform>
+		<ztransform>0</ztransform>
+	</plane>
+	<plane id="1004">
+		<xdim>0.01</xdim>
+		<ydim>0.2</ydim>
+		<zdim>0.7</zdim>
+		<xtransform>0.5</xtransform>
+		<ytransform>0</ytransform>
+		<ztransform>0</ztransform>
+	</plane>
+	<plane id="1005">
+		<xdim>0.5</xdim>
+		<ydim>0.2</ydim>
+		<zdim>0.01</zdim>
+		<xtransform>0</xtransform>
+		<ytransform>0</ytransform>
+		<ztransform>0.7</ztransform>
+	</plane>
+</appartment>
+
