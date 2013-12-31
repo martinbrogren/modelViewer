@@ -114,6 +114,13 @@ public class appartmentWithColladaApplet extends Applet implements ActionListene
 	
 	public appartmentWithColladaApplet()
 	{		
+		
+
+		System.out.println("LD Library Path:" + System.getProperty("java.library.path"));
+		String workingDir = appartmentWithColladaApplet.class.getProtectionDomain().getCodeSource().getLocation().getFile();
+		System.out.println("Working directory: " + appartmentWithColladaApplet.class.getProtectionDomain().getCodeSource().getLocation().getFile());
+		
+		
 		_dae_url = getClass().getResource(_colladaFile);
 		
 		setLayout(new BorderLayout());
