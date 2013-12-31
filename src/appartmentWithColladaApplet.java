@@ -122,6 +122,7 @@ public class appartmentWithColladaApplet extends Applet implements ActionListene
 		
 		
 		_dae_url = getClass().getResource(_colladaFile);
+		System.out.println("dae file path: " + _dae_url.getPath());
 		
 		setLayout(new BorderLayout());
 
