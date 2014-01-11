@@ -25,6 +25,7 @@ import java.util.Enumeration;
 import java.util.Vector;
 import com.sun.j3d.utils.image.TextureLoader;
 import javax.swing.Timer;
+import javax.swing.text.html.HTMLDocument.HTMLReader.SpecialAction;
 
 import com.sun.j3d.loaders.IncorrectFormatException;
 import com.sun.j3d.loaders.ParsingErrorException;
@@ -48,11 +49,13 @@ public class appartmentWithColladaApplet extends Applet implements ActionListene
 	private Color3f black = new Color3f(0.0f, 0.0f, 0.0f);
 	private Color3f white = new Color3f(1.0f, 1.0f, 1.0f);
 	
+	private Color3f backgroundColor = new Color3f(1.0f, 1.0f, 1.0f);
+	
 	private SimpleUniverse universe;
 
 	private AlphaComposite ac = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, .0f);
 	private float _acSpeed = 0.05f;
-	private float _acMax = .5f;
+	private float _acMax = 1.0f;
 	
 	private Timer timer;
 	
@@ -75,18 +78,27 @@ public class appartmentWithColladaApplet extends Applet implements ActionListene
 //	private String _colladaFile = "/data/sketchup_model2.dae";
 //	private String _colladaFile = "/home/martin/Code/JavaVisualizer/data/Oscars_appartment_v01/collada.dae";
 //	private String _colladaFile = "/data/collada.dae";
+	
 	private String _colladaFile = "/data/Oscars_appartment_v01/collada.dae";
 	float _sizeFactor = 100.0f; //For adding cameras
 	float _posFactor = 1.0f; //For adding cameras
-	boolean _useDegrees = false;
-//	float _factor = 100.0f; //For adding cameras
 	float _zSign = 1.0f; //When adding cameras
 	private Axis axis = Axis.POSITIVE_Y_AXIS;
+	private boolean _addViews = true;
+	
+//	private String _colladaFile = "/data/final_model/collada.dae";
+//	float _sizeFactor = 1.0f; //For adding cameras
+//	float _posFactor = .01f; //For adding cameras
+//	float _zSign = 1.0f; //When adding cameras
+//	private Axis axis = Axis.POSITIVE_Y_AXIS;
+//	private boolean _addViews = false;
+	
 //	private String _colladaFile = "/home/martin/Code/FlashViewer/TestProject3/bin/geometry/geometry.dae";
 //	float _factor = 1.0f;
 //	float _zSign = -1.0f;
 //	private Axis axis = Axis.NEGATIVE_Y_AXIS;
-	private boolean _addViews = true;
+	
+	boolean _useDegrees = false;
 //	private String _cameraPath = "/home/martin/Code/JavaVisualizer/data/Oscars_appartment_v01/"; //File must be names views.xml
 	private String _cameraPath = "/data/"; //File must be names views.xml
 //	private String _cameraPath = "/home/martin/Code/FlashViewer/TestProject3/bin/detail/"; //File must be names views.xml/
@@ -156,6 +168,7 @@ public class appartmentWithColladaApplet extends Applet implements ActionListene
 
 		universe.getViewingPlatform().setNominalViewingTransform();
 		
+		
 		BranchGroup scene = null;
 		if(useCollada)
 		{
@@ -166,6 +179,8 @@ public class appartmentWithColladaApplet extends Applet implements ActionListene
 			axis = Axis.POSITIVE_Z_AXIS;
 			scene = createSceneGraph();
 		}
+		
+		addBackground(scene);
 		
 		setModelInView(scene);
 		
@@ -200,6 +215,13 @@ public class appartmentWithColladaApplet extends Applet implements ActionListene
 		System.out.println("");
 	}
 
+	public void addBackground(BranchGroup scene)
+	{
+		BoundingSphere sphere = new BoundingSphere(new Point3d(0,0,0), 10000.0);
+		Background background = new Background(backgroundColor);
+		background.setApplicationBounds(sphere);
+		scene.addChild(background);
+	}
 	
 	public BranchGroup createSceneGraph() {
 
@@ -339,7 +361,7 @@ public class appartmentWithColladaApplet extends Applet implements ActionListene
 		}
 		
 		scene = colladaScene.getSceneGroup();
-
+		
 		addFunctionalityToChildren(scene, addMouseControl, _addViews, _cameraPath);
 		
 		return scene;
@@ -487,7 +509,7 @@ public class appartmentWithColladaApplet extends Applet implements ActionListene
 			vectorCamera.scale(_posFactor);
 			if(_useDegrees)
 			{
-				transformCamera.rotZ(viewVector.get(viewIdx).azimuth*Math.PI/180.0 + Math.PI); //OBS!! Added extra PI to get correct rotation	
+				transformCamera.rotZ(viewVector.get(viewIdx).azimuth*Math.PI/180.0 + Math.PI); //OBS!! Added extra PI to get correct rotation
 			}
 			else
 			{
